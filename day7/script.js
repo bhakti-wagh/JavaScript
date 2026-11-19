@@ -576,6 +576,7 @@ Expected output:
 150
 200
 */
+/*
 let arr = [10, 20, 30, 40]
 
 function printNumber(num){
@@ -583,7 +584,166 @@ function printNumber(num){
     
 }
 
-arr.forEach(printNumber)
+arr.forEach(printNumber)*/
+
+
+
+/*Level 3 — reduce() (10 tasks)
+Intermediate
+Remember: reduce() uses an accumulator to maintain the result while processing array elements.
+
+Task 21. Find the sum of all numbers
+
+Array: [10, 20, 30, 40]
+
+Expected output: 100
+
+*/
+
+/*
+let arr =[10,20,30,40]
+
+let value = arr.reduce((acc,val,ind,arr)=>{
+    return  acc+=val 
+})
+
+console.log(value);*/
+
+
+
+/*Task 22. Find the product of all numbers
+
+Array: [2, 3, 4, 5]
+
+Expected output: 120*/
+
+/*
+let arr = [2,3,4,5]
+
+let product = arr.reduce((acc,val,ind,arr)=>{
+    return acc*=val
+})
+
+console.log(product);*/
+
+
+/*Task 23. Find the maximum number
+
+Array: [10, 50, 20, 90, 30]
+
+Expected output: 90
+
+*/
+
+/*
+let arr = [10,50,20,90,30]
+
+let max = arr.reduce((acc,val)=>{
+    if(val>acc){
+        return val
+    }
+    else{
+        return acc
+    }
+})
+
+console.log(max);*/
+
+
+
+/*Task 24. Find the minimum number
+
+Array: [45, 12, 78, 5, 34]
+
+Expected output: 5
+*/
+/*
+let arr = [45,12,78,5,34]
+
+let min = arr.reduce((acc,val,ind)=>{
+    if(val<acc){
+        return val
+    }
+    else{
+        return acc
+    }
+})
+
+console.log(min);*/
+
+
+
+/*Task 25. Count the total number of elements
+
+Array: [10, 20, 30, 40, 50]
+
+Expected output: 5
+*/
+/* 
+let arr = [10,20,30,40,50]
+
+let total = arr.reduce((acc,val,ind,arr)=>{
+
+    return acc+1
+    
+},0)
+
+console.log(total);
+ */
+
+
+
+/*Task 26. Find the sum of even numbers only
+
+Array: [1, 2, 3, 4, 5, 6, 7, 8]
+
+Expected output: 20*/
+
+
+/*
+let arr =  [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+let sum_even = arr.reduce((acc,val)=>{
+
+    if(val%2==0){
+        return val+acc;
+    }
+})
+
+console.log(sum_even);
+*/
+
+
+
+let arr = [-10,20,-30,40,50]
+
+/* let postive = (cb)=>{
+
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]>0){
+            cb(arr[i])
+        }
+    }
+}
+
+postive((val)=>{
+    console.log(val);
+    
+}) */
+
+
+arr.forEach((val)=>{
+    if(val>0){
+        console.log(val);
+        
+    }
+})
+
+
+
+
+
 
 
 
